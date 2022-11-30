@@ -10,11 +10,11 @@ export default function App() {
     return <>
         {/* <Perf position="bottom-right" /> */}
 
-        <OrbitControls makedefault />
-        {/* <PresentationControls
+        {/* <OrbitControls makedefault /> */}
+        <PresentationControls
             polar={[0, Math.PI / 4]}
             azimuth={[-Math.PI / 6, Math.PI / 6]}
-        > */}
+        >
         <Lights />
 
         <Physics>
@@ -22,6 +22,6 @@ export default function App() {
             <Ambience />
             <Sphere />
         </Physics>
-        {/* </PresentationControls> */}
+        </PresentationControls>
     </>
 }
