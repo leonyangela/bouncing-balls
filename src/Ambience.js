@@ -30,18 +30,32 @@ function Walls() {
                 restitution={0.5}
             >
                 {/* X axis (BACK FRONT) */}
-                <mesh
+                {/* <mesh
                     position={[0, 3, -6]}
                     scale={[10, 8, 2]}
                     receiveShadow
                 >
                     <boxGeometry />
                     <meshStandardMaterial color="#f4eee1" />
-                </mesh>
+                </mesh> */}
+
+                <CuboidCollider
+                    args={[5,4, 1]}
+                    position={[0, 3, -6]}
+                />
 
                 <CuboidCollider
                     args={[5, 4, 1]}
                     position={[0, 3, 6]}
+                />
+
+                <CuboidCollider
+                    args={[1, 4,5]}
+                    position={[6, 3, 0]}
+                />
+                <CuboidCollider
+                    args={[1, 4, 5]}
+                    position={[-6, 3, 0]}
                 />
 
                 {/* <mesh
@@ -54,7 +68,7 @@ function Walls() {
                 </mesh> */}
 
                 {/* Y axis (RIGHT LEFT) */}
-                <mesh
+                {/* <mesh
                     position={[6, 3, 0]}
                     scale={[2, 8, 10]}
                     receiveShadow
@@ -69,7 +83,7 @@ function Walls() {
                 >
                     <boxGeometry />
                     <meshBasicMaterial color="#c3cdbf" />
-                </mesh>
+                </mesh> */}
 
             </RigidBody>
         </group>
@@ -78,27 +92,27 @@ function Walls() {
 
 export function Floor() {
     const body = useRef()
-    const [smoothedCameraPosition] = useState(() => new THREE.Vector3(-50, -30, 0))
-    const [smoothedCameraTarget] = useState(() => new THREE.Vector3())
+    // const [smoothedCameraPosition] = useState(() => new THREE.Vector3(-50, -30, 0))
+    // const [smoothedCameraTarget] = useState(() => new THREE.Vector3())
 
-    useFrame((state, delta) => {
-        const bodyPosition = body.current.translation()
+    // useFrame((state, delta) => {
+    //     const bodyPosition = body.current.translation()
 
-        const cameraPosition = new THREE.Vector3()
-        cameraPosition.copy(bodyPosition)
-        cameraPosition.z += 10
-        cameraPosition.y += 2
+    //     const cameraPosition = new THREE.Vector3()
+    //     cameraPosition.copy(bodyPosition)
+    //     cameraPosition.z += 10
+    //     cameraPosition.y += 2
 
-        const cameraTarget = new THREE.Vector3()
-        cameraTarget.copy(bodyPosition)
-        cameraTarget.y -= 0.5
+    //     const cameraTarget = new THREE.Vector3()
+    //     cameraTarget.copy(bodyPosition)
+    //     cameraTarget.y -= 0.5
 
-        smoothedCameraPosition.lerp(cameraPosition, 5 * delta)
-        smoothedCameraTarget.lerp(cameraTarget, 5 * delta)
+    //     smoothedCameraPosition.lerp(cameraPosition, 5 * delta)
+    //     smoothedCameraTarget.lerp(cameraTarget, 5 * delta)
 
-        state.camera.position.copy(smoothedCameraPosition)
-        state.camera.lookAt(smoothedCameraTarget)
-    })
+    //     state.camera.position.copy(smoothedCameraPosition)
+    //     state.camera.lookAt(smoothedCameraTarget)
+    // })
 
     return <>
         <RigidBody
@@ -113,7 +127,7 @@ export function Floor() {
                 receiveShadow
             >
                 <boxGeometry />
-                <meshStandardMaterial color="#919f88" />
+                <meshStandardMaterial color="#E8C4C4" />
             </mesh>
         </RigidBody>
     </>

@@ -31,7 +31,7 @@ export default function Sphere() {
             <instancedMesh ref={balls} castShadow args={[null, null, ballsCount]}>
                 <sphereGeometry />
                 <meshStandardMaterial
-                    color="#c7ddb5"
+                    color="#CE7777"
                     roughness={0.5}
                     metalness={0}
                 />
