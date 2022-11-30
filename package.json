@@ -1,0 +1,41 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "WebGL Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Leoni Angela",
+  "license": "ISC",
+  "devDependencies": {
+    "@react-three/fiber": "^8.9.1",
+    "react-scripts": "^5.0.1",
+    "three": "^0.146.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.42.2",
+    "@react-three/rapier": "^0.11.0",
+    "babel-plugin-glsl": "^1.0.0",
+    "install": "^0.13.0",
+    "leva": "^0.9.34",
+    "npm": "^9.1.2",
+    "r3f-perf": "^6.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
