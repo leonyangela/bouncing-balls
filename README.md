@@ -11,13 +11,13 @@ A real-time 3D particle playground built for the web. Hover over the balls and w
 - **Real-Time Rendering**: Hundreds of 3D spheres rendered directly in the browser.
 
 ## Demo
-
-![Interactive Physics Bouncing Balls]
+<img width="1470" height="879" alt="Screenshot 2026-03-08 at 12 22 28 PM" src="https://github.com/user-attachments/assets/0539d8db-dad1-4df4-b143-a358151fd3e3" />
 
 ## Controls
 
 - **Hover Mouse**: Disturb the balls, causing them to bounce and collide.
 - **Move Camera**: Limited to left and right only.
+
 
 ## Technologies
 
